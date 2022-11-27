@@ -1,0 +1,113 @@
+{
+    "ssoSiteUrl": "http://dev.yizhangtu.com:9552",
+    "routes": [
+        {
+            "login": {
+                "optional": true
+            },
+            "alias": "Babylon Learn",
+            "siteTitle": "Babylon Learn",
+            "siteIcon": "/favicon.png",
+            "route": "/",
+            "template": "@system/layout-classic",
+            "props": {
+                "themeColor": "rgb(16 84 191)",
+                "header": {
+                    "theme": "default",
+                    "logoSvg": "logo-xing",
+                    "rightExtra": [
+                        {
+                            "template": "@system/addons/header-user-menu",
+                            "props": {
+                                "extra": [
+                                    {
+                                        "template": "@system/addons/theme-settings-menu-item"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "children": [
+                {
+                    "default": true,
+                    "alias": "首页",
+                    "route": "./home",
+                    "template": "@system/layout-classic/content",
+                    "children": [
+                        {
+                            "alias": "分组一",
+                            "svg": "caidanlan-caiwu-kanzhang",
+                            "menu": [
+                                {
+                                    "default": true,
+                                    "alias": "立体地形",
+                                    "svg": "caidanlan-shengchan-wuliaoqingdan",
+                                    "route": "./hello-babylon",
+                                    "template": "hello-babylon"
+                                },
+                                {
+                                    "alias": "地面贴图",
+                                    "svg": "caidanlan-kehu-kehuguanli",
+                                    "route": "./hello-ground",
+                                    "template": "hello-ground"
+                                },
+                                {
+                                    "alias": "海洋",
+                                    "svg": "caidanlan-chanpin-chanpinfenleishezhi",
+                                    "route": "./sea",
+                                    "template": "sea"
+                                }
+                            ]
+                        },
+                        {
+                            "alias": "分组二",
+                            "svg": "caidanlan-renshi-jiangchengjilu",
+                            "menu": [
+                                {
+                                    "alias": "页面四",
+                                    "svg": "caidanlan-kefu-QAku",
+                                    "route": "./page4",
+                                    "template": "echo"
+                                },
+                                {
+                                    "alias": "页面五",
+                                    "svg": "caidanlan-shangcheng-jifenmingxi",
+                                    "route": "./page5",
+                                    "template": "echo"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "alias": "帮助",
+                    "route": "./docs",
+                    "template": "@system/layout-classic/content",
+                    "props": {
+                        "theme": "light"
+                    },
+                    "children": [
+                        {
+                            "default": true,
+                            "alias": "概览",
+                            "svg": "caidanlan-bangong-feiyongbaoxiao",
+                            "route": "./intro",
+                            "template": "docs-intro"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "apps": [
+        {
+            "title": "Freesia Design",
+            "logoImage": "http://help.yizhangtu.com/images/apps/logo-freesia-design-docs.png",
+            "logoImageStyle": {},
+            "description": "鱼鳞图 Web 前端框架的官方网站，您可以在这里看到相关的介绍、使用说明和丰富的示例",
+            "url": "http://help.yizhangtu.com"
+        }
+    ]
+}
